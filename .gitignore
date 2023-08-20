@@ -3,8 +3,8 @@
 /macos
 /linux
 /build
-/ios
 .flutter-plugins-dependencies
 .flutter-plugins
 pubspec.lock
 .DS_Store
+dusty_dust.iml
