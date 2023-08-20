@@ -1,0 +1,10 @@
+/windows
+/web
+/macos
+/linux
+/build
+/ios
+.flutter-plugins-dependencies
+.flutter-plugins
+pubspec.lock
+.DS_Store
