@@ -1,3 +1,2 @@
-# dusty_dust
+# 미세먼지 앱 개발 노트
 
-A new Flutter project.
