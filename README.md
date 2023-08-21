@@ -1,20 +1,34 @@
 # 미세먼지 앱 개발 노트
 
+<<<<<<< feat/sliver_app_bar
 2023/08/20 (일)
 
 ### SliverAppBar
+=======
+### 2023/08/20 (일) - SliverAppBar
+>>>>>>> main
 
 ---
 
 <center><h3>Files List</h3></center>
 
+<<<<<<< feat/sliver_app_bar
 <img width="399" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/c2a81efc-d7ba-4d8a-890b-9259c2285d3b">
+=======
+<p align="center"><img width="399" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/c2a81efc-d7ba-4d8a-890b-9259c2285d3b"></p>
+>>>>>>> main
 
 ---
 
 
+<<<<<<< feat/sliver_app_bar
 
 <img width="318" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/55ce0dd2-025a-4719-a78c-54e2470b5e15">
+=======
+<p align="center">
+<img width="318" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/55ce0dd2-025a-4719-a78c-54e2470b5e15">
+</p>
+>>>>>>> main
 
 + 상하 위 아래로 스크롤이 가능한 AppBar를 구현
 
