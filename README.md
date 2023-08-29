@@ -1,53 +1,24 @@
 # 미세먼지 앱 개발 노트
 
-### 2023/08/20 (일) - SliverAppBar
-
----
-
-<center><h3>Files List</h3></center>
-
-<p align="center"><img width="399" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/c2a81efc-d7ba-4d8a-890b-9259c2285d3b"></p>
-
----
-
-
-<p align="center">
-<img width="318" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/55ce0dd2-025a-4719-a78c-54e2470b5e15">
+<p align ="center">
+<img width="411" alt="image" src="https://github.com/baka9131/project-dusty-dust/assets/93738662/9ee50eff-ee48-47df-9e7d-a03dfe229b35">
 </p>
 
-+ 상하 위 아래로 스크롤이 가능한 AppBar를 구현
+HTTP 통신을 이용해서 네트워크 요청
+
++ Dio 패키지를 이용한 HTTP 요청
++ 정부 Open API 사용
++ Hive NoSQL 데이터베이스 사용
++ 오프라인 지원 및 캐싱
++ Drawer 위젯 사용
++ CustomScrollView 사용
 
 
 
-```dart
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: primaryColor,
-      body: CustomScrollView(
-        slivers: [
-          MainAppBar(),
-        ],
-      ),
-    );
-  }
-}
-```
-
-* CustomScrollView 사용하여 slivers를 통해 위아래 스크롤이 가능하고 커스텀이 가능하도록 구현
-
-
-
-```dart
-import 'package:intl/intl.dart';
-
-final String formatDate = DateFormat('yy/MM/dd HH:mm').format(
-      // 날짜의 데이터 포맷을 지정
-      DateTime.now(),
-    );
-```
-
-+ format()을 통해서 날짜를 원하는 부분까지만 지정하여 출력하게 설정
+1. 08/20/2023 - SliverAppBar / https://github.com/baka9131/project-dusty-dust/pull/2
+2. 08/21/2023 - Drawer / https://github.com/baka9131/project-dusty-dust/pull/3
+3. 08/23/2023 - CategoryCard / https://github.com/baka9131/project-dusty-dust/pull/4
+4. 08/26/2023 - HourlyCard / https://github.com/baka9131/project-dusty-dust/pull/5
+5. 08/27/2023 - 미세먼지 공공기관 데이터 API 작업 / https://github.com/baka9131/project-dusty-dust/pull/6
+6. 08/29/2023 - StatusLevel / https://github.com/baka9131/project-dusty-dust/pull/7
+7. 08/29/2023 - SliverAppBar에 데이터 적용 / https://github.com/baka9131/project-dusty-dust/pull/8

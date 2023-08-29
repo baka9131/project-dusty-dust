@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../const/colors.dart';
+import '../model/stat_model.dart';
+import '../model/status_model.dart';
 
 class MainAppBar extends StatelessWidget {
-  const MainAppBar({super.key});
+  // 가져온 stat 모델로 단계를 나누는 모델
+  final StatusModel status;
+  // 실제 데이터를 가져오는 모델
+  final StatModel stat;
+
+  const MainAppBar({
+    super.key,
+    required this.status,
+    required this.stat,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +26,7 @@ class MainAppBar extends StatelessWidget {
       DateTime.now(),
     );
     return SliverAppBar(
-      backgroundColor: primaryColor,
+      backgroundColor: status.primaryColor,
       expandedHeight: 500, // 높이 최대 사이즈 지정
       flexibleSpace: FlexibleSpaceBar(
         // AppBar의 상하 스크롤 (FlexibleSpaceBar)
@@ -40,12 +50,12 @@ class MainAppBar extends StatelessWidget {
                 ),
                 const SizedBox(height: 20.0),
                 Image.asset(
-                  'asset/img/mediocre.png',
+                  status.imagePath,
                   width: MediaQuery.of(context).size.width / 2,
                 ),
                 const SizedBox(height: 20.0),
                 Text(
-                  '보통',
+                  status.label,
                   style: ts.copyWith(
                     fontSize: 40.0,
                     fontWeight: FontWeight.w700,
@@ -53,7 +63,7 @@ class MainAppBar extends StatelessWidget {
                 ),
                 const SizedBox(height: 8.0),
                 Text(
-                  '나쁘지 않네요!',
+                  status.comment,
                   style: ts.copyWith(
                     fontSize: 20.0,
                     fontWeight: FontWeight.w700,
