@@ -15,6 +15,10 @@ HTTP 통신을 이용해서 네트워크 요청
 
 
 
+---
+
+
+
 1. 08/20/2023 - SliverAppBar / https://github.com/baka9131/project-dusty-dust/pull/2
 2. 08/21/2023 - Drawer / https://github.com/baka9131/project-dusty-dust/pull/3
 3. 08/23/2023 - CategoryCard / https://github.com/baka9131/project-dusty-dust/pull/4
@@ -22,3 +26,4 @@ HTTP 통신을 이용해서 네트워크 요청
 5. 08/27/2023 - 미세먼지 공공기관 데이터 API 작업 / https://github.com/baka9131/project-dusty-dust/pull/6
 6. 08/29/2023 - StatusLevel / https://github.com/baka9131/project-dusty-dust/pull/7
 7. 08/29/2023 - SliverAppBar에 데이터 적용 / https://github.com/baka9131/project-dusty-dust/pull/8
+8. 08/30/2023 - DataUtils 작업 / https://github.com/baka9131/project-dusty-dust/pull/9
