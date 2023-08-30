@@ -1,5 +1,5 @@
+import 'package:dusty_dust/utils/data_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import '../model/stat_model.dart';
 import '../model/status_model.dart';
 
@@ -21,10 +21,6 @@ class MainAppBar extends StatelessWidget {
       color: Colors.white,
       fontSize: 30.0,
     );
-    final String formatDate = DateFormat('yy/MM/dd HH:mm').format(
-      // 날짜의 데이터 포맷을 지정
-      DateTime.now(),
-    );
     return SliverAppBar(
       backgroundColor: status.primaryColor,
       expandedHeight: 500, // 높이 최대 사이즈 지정
@@ -43,7 +39,7 @@ class MainAppBar extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  formatDate,
+                  DataUtils.getTimeFromDateTime(),
                   style: ts.copyWith(
                     fontSize: 20.0,
                   ),

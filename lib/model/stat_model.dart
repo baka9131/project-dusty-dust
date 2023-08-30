@@ -68,9 +68,8 @@ class StatModel {
       // ItemCode의 값들 중 raw의 값이랑 같을 경우 그 값을 가져옴
       return ItemCode.values.firstWhere((element) => element.name == raw);
 
-      // ignore: dead_code
-      ItemCode.NO2.name;
-      ItemCode.NO2.toString();
+      // ItemCode.NO2.name;
+      // ItemCode.NO2.toString();
       // 두개의 차이점은 1번은 'NO2' 로 나오고 2번은 'ItemCode.NO2' 로 출력된다. 2번으로 했을때는 따로 split를 해야함
     }
 }
