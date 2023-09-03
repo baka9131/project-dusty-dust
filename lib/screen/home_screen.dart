@@ -17,11 +17,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // 서울
   String region = regions[0];
 
-  Future<List<StatModel>> fetchData() async {
-    final statModels = await StatRepository.fetchData();
-    return statModels;
+  Future<Map<ItemCode, List<StatModel>>> fetchData() async {
+    Map<ItemCode, List<StatModel>> stats = {};
+
+    // for문으로 모든 데이터에 ItemCode를 statModels에 하나씩 넣어줌
+    for (ItemCode itemCode in ItemCode.values) {
+      final statModels = await StatRepository.fetchData(itemCode: itemCode);
+
+      stats.addAll({
+        itemCode: statModels,
+      });
+    }
+    return stats;
   }
 
   @override
@@ -37,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       backgroundColor: primaryColor,
-      body: FutureBuilder<List<StatModel>>(
+      body: FutureBuilder<Map<ItemCode, List<StatModel>>>(
         future: fetchData(),
         builder: (context, snapshot) {
           // 데이터에 오류가 있을 경우 메세지 출력
@@ -49,13 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
             return Center(child: CircularProgressIndicator());
           }
 
-          List<StatModel> stats = snapshot.data!;
+          Map<ItemCode, List<StatModel>> stats = snapshot.data!;
           // 처음 리스트의 데이터를 가져옴 (앱바에 보여줄 내용)
-          StatModel recentStat = stats[0];
+          StatModel pm10RecentStat = stats[ItemCode.PM10]![0];
 
           // 1-5, 6-10, 11-15
           final status = DataUtils.getStatusFromItemCodeAndValue(
-            value: recentStat.seoul,
+            value: pm10RecentStat.seoul,
             itemCode: ItemCode.PM10,
           );
 
@@ -63,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
             slivers: [
               MainAppBar(
                 region: region,
-                stat: recentStat,
+                stat: pm10RecentStat,
                 status: status,
               ),
               SliverToBoxAdapter(
