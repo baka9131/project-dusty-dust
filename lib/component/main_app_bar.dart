@@ -4,6 +4,8 @@ import '../model/stat_model.dart';
 import '../model/status_model.dart';
 
 class MainAppBar extends StatelessWidget {
+  // 지역
+  final String region;
   // 가져온 stat 모델로 단계를 나누는 모델
   final StatusModel status;
   // 실제 데이터를 가져오는 모델
@@ -13,6 +15,7 @@ class MainAppBar extends StatelessWidget {
     super.key,
     required this.status,
     required this.stat,
+    required this.region,
   });
 
   @override
@@ -32,7 +35,7 @@ class MainAppBar extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  '서울',
+                  region,
                   style: ts.copyWith(
                     fontSize: 40.0,
                     fontWeight: FontWeight.w700,

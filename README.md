@@ -27,3 +27,4 @@ HTTP 통신을 이용해서 네트워크 요청
 6. 08/29/2023 - StatusLevel / https://github.com/baka9131/project-dusty-dust/pull/7
 7. 08/29/2023 - SliverAppBar에 데이터 적용 / https://github.com/baka9131/project-dusty-dust/pull/8
 8. 08/30/2023 - DataUtils 작업 / https://github.com/baka9131/project-dusty-dust/pull/9
+8. 08/31/2023 - "지역" 상태 변경 작업 / https://github.com/baka9131/project-dusty-dust/pull/10
